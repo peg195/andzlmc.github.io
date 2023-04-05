@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+  
+<html lang="zh-CN">
+
+<head>
+  
+    
+  <meta charset="UTF-8">
+
+    
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	  
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+		
+		
+		<title>我们入驻某不知名论坛了</title>
+		
+    
+		<style>
+       
+		  * {
+            margin:0;
+            padding:0;
+        }
+        
+		  body {
+            
+		  color: #FFF;
+            
+		  font-size:14px;
+           
+		  overflow-x: hidden;
+        }
+        
+		  h1,h2,h3,h4,h5,h6 {
+            
+		  font-weight: 500;
+        }
+        
+		  #background {
+            
+		  position: fixed;
+           
+		  top:0;
+           
+		  z-index: -1;
+            
+		  background-image: url(./black.jpg);
+            
+		  opacity: .8;
+            
+		  width: 100%;
+           
+		  height: 100%;
+        
+		  }
+        
+		  .content {
+           
+		  font-weight: 500;
+           
+		  text-align: center;
+            
+		  margin-top:100px;
+        
+		  }
+
+        
+		  .joinus {
+           
+		  display: inline-block;
+           
+		  margin-top:30px;
+        
+		  padding:20px;
+         
+		  color:#FFF;
+           
+		  font-size:20px;
+       
+		  border:3px solid #000;
+           
+		  text-decoration: none;
+            
+		  border-radius: 15px;
+         
+		  transition: all .5s;
+        }
+
+      
+		  .joinus:hover {
+           
+		  background-color: #fff;
+          
+		  color:#000;
+        }
+		
+		  </style>
+  
+		  <div>
+
+        
+	
+			<include src="news.html">
+	
+			  </include>
+
+
+	
+			  </div>
+			  
+</head>
+			  
+<body>
+  
+				<h2>ZL Minecraft 服务器</h2><small>诗句由一言提供技术支持</small>
+  
+				<a href="index.html" class="logo">
+
+
+  
+				  </a>
+   
+  
+				  <marquee><a href="#" id="hitokoto_text" style="color:#FFF;text-decoration: none;"></a> </marquee>
+
+    
+  
+				  </p>
+
+    
+  
+				  <script>
+        
+	
+					fetch('https://v1.hitokoto.cn')
+
+        
+					
+	.then(response => response.json())
+
+        
+					
+	.then(data => {
+
+         
+					
+	const hitokoto = document.querySelector('#hitokoto_text')
+
+   
+					
+	hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`
+
+        
+					
+	hitokoto.innerText = data.hitokoto
+          
+					})
+
+            
+
+					.catch(console.error)
+   
+					</script>
+
+	  
+					</script>
+	 
+					</ui>
+  
+		  
